@@ -1,5 +1,11 @@
-* {
-    color: white;
+@font-face{
+    font-family: 'Gilroy';
+    src: url('./fonts/Gilroy-Regular.eot');
+    src: url('./fonts/Gilroy-Regular.eot?iefix') format('eot'),
+    url('./fonts/Gilroy-Regular.woff') format('woff'),
+    url('./fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .body {
@@ -7,6 +13,25 @@
     width: 100%;
     align-items: center;
     flex-direction: column;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    color: white;
+    height: 64px;
+    border: 1px solid white;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    font: 600 18px/28px "Gilroy", sans-serif;
+}
+
+.button:hover {
+    background: white;
+    color: #232323;
 }
 
 .header {
@@ -18,6 +43,31 @@
     background: #232323;
     color: white;
     padding: 0 360px;
+}
+
+.header__logo, .header__contacts {
+    width: 33%;
+}
+
+.header__site {
+    display: flex;
+    justify-content: center;
+    font: 500 18px/28px "Gilroy", sans-serif;
+    color: white;
+}
+
+.header__contacts {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__contacts-item {
+    font: 500 18px/28px "Gilroy", sans-serif;
+    color: white;
+}
+
+.header__contacts-item:first-child {
+    margin-right: 20px;
 }
 
 .main {
@@ -39,20 +89,50 @@
     width: 50%;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
-    padding: 0 150px;
+    padding: 0 140px;
 }
 
 .carousel__description-social {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 170px 0 20px;
+    height: 140px;
 }
 
 .carousel__description-block {
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.carousel__description-block-title {
+    display: flex;
+    width: 100%;
+    font: 700 50px/78px "Gilroy", sans-serif;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.carousel__description-block-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.carousel__description-block-text-big {
+    font: 400 24px/37px "Gilroy", sans-serif;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.carousel__description-block-text-little {
+    font: 400 16px/25px "Gilroy", sans-serif;
+    color: white;
+}
+
+.carousel__description-block-consultation {
+    display: flex;
+    width: 100%;
 }
 
 .carousel__description-image {
@@ -60,7 +140,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: blue;
+    background-image: url("./images/Bgrng.png");
 }
 
 .about {
@@ -74,7 +154,9 @@
 }
 
 .about__title {
-
+    font: 600 32px/50px "Gilroy", sans-serif;
+    color: white;
+    margin-bottom: 50px;
 }
 
 .about__block {
@@ -92,7 +174,24 @@
 }
 
 .about__block-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+}
+
+.about__block-description-title {
+    font: 700 18px/28px "Gilroy", sans-serif;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.about__block-description-text {
+    text-align: center;
+    font: 500 16px/25px "Gilroy", sans-serif;
+    color: white;
 }
 
 .work {
@@ -105,13 +204,16 @@
 }
 
 .work__title {
-
+    font: 600 32px/50px "Gilroy", sans-serif;
+    color: white;
+    margin-bottom: 50px;
 }
 
 .work__steps {
     display: flex;
     justify-content: space-between;
     width: 1200px;
+    margin-bottom: 100px;
 }
 
 .work__steps-item {
@@ -119,11 +221,37 @@
     flex-direction: column;
     width: 387px;
     height: 188px;
+    padding: 30px;
     background: rgba(255, 255, 255, 0.1);
 }
 
 .work__steps-item-title {
     display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.work__steps-item-title-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: white;
+    color: #232323;
+    margin-right: 12px;
+    font: 700 18px/28px "Gilroy", sans-serif;
+}
+
+.work__steps-item-title-text {
+    font: 700 18px/28px "Gilroy", sans-serif;
+    color: white;
+}
+
+.work__steps-item-description {
+    font: 500 16px/25px "Gilroy", sans-serif;
+    color: white;
 }
 
 .portfolio {
@@ -135,7 +263,9 @@
 }
 
 .portfolio__title {
-
+    font: 600 32px/50px "Gilroy", sans-serif;
+    color: white;
+    margin-bottom: 50px;
 }
 
 .portfolio__carousel {
@@ -162,7 +292,6 @@
     position: relative;
     flex: 0 0 1080px;
     width: 100%;
-    background-color: blue;
     counter-increment: item;
     margin-right: 20px;
 }
@@ -176,14 +305,15 @@
 }
 
 .comparison__title {
-
+    font: 600 32px/50px "Gilroy", sans-serif;
+    color: white;
+    margin-bottom: 50px;
 }
 
 .comparison__component {
     display: flex;
     width: 1200px;
     height: 680px;
-    background: blue;
     justify-content: center;
     align-items: center;
 }
@@ -197,11 +327,16 @@
 }
 
 .video__title {
-
+    font: 600 32px/50px "Gilroy", sans-serif;
+    color: white;
+    margin-bottom: 50px;
 }
 
 .video__description {
-
+    font: 500 16px/25px "Gilroy", sans-serif;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
 }
 
 .video__component {
@@ -210,7 +345,6 @@
     align-items: center;
     width: 1200px;
     height: 680px;
-    background: blue;
 }
 
 .form {
@@ -221,13 +355,28 @@
     padding: 200px 0;
 }
 
+.form__title {
+    font: 600 32px/50px "Gilroy", sans-serif;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.form__description {
+    font: 400 18px/28px "Gilroy", sans-serif;
+    color: white;
+    margin-bottom: 50px;
+}
+
 .form__component {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 705px;
     height: 603px;
-    background: blue;
+    color: white;
+    border: 1px solid white;
 }
 
 .footer {
@@ -240,7 +389,44 @@
     align-items: center;
 }
 
+.footer__logo {
+    width: 33%;
+}
 
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.footer__contacts-item {
+    font: 500 18px/28px "Gilroy", sans-serif;
+    color: white;
+}
+
+.footer__contacts-item:first-child {
+    margin-bottom: 10px;
+}
+
+.footer__social {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    align-items: flex-end;
+}
+
+.footer__social-email {
+    font: 500 18px/28px "Gilroy", sans-serif;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.footer__social-items {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    width: 140px;
+}
 
 
 
