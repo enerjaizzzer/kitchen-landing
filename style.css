@@ -8,12 +8,73 @@
     font-style: normal;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .body {
     display: flex;
     width: 100%;
     align-items: center;
     flex-direction: column;
 }
+
+.burger-contacts-block {
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    width: 0;
+    height: 100vh;
+    background: #1C1C1C;
+    top: 0;
+    right: 0;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+
+.burger-contacts-block__header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 50px;
+}
+
+.burger-contacts-block__header-close {
+    width: 20px;
+    transition: 0.3s;
+}
+
+.burger-contacts-block__site {
+    display: flex;
+    justify-content: center;
+    font: 500 18px/28px "Gilroy", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.burger-contacts-block__site:hover {
+    text-decoration: underline;
+}
+
+.burger-contacts-block__contacts {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.burger-contacts-block__contacts-item {
+    font: 500 18px/28px "Gilroy", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.burger-contacts-block__contacts-item:hover {
+    text-decoration: underline;
+}
+
 
 .button {
     display: flex;
@@ -27,6 +88,7 @@
     cursor: pointer;
     transition: 0.3s;
     font: 600 18px/28px "Gilroy", sans-serif;
+    text-decoration: none;
 }
 
 .button:hover {
@@ -54,6 +116,11 @@
     justify-content: center;
     font: 500 18px/28px "Gilroy", sans-serif;
     color: white;
+    text-decoration: none;
+}
+
+.header__site:hover {
+    text-decoration: underline;
 }
 
 .header__contacts {
@@ -64,6 +131,11 @@
 .header__contacts-item {
     font: 500 18px/28px "Gilroy", sans-serif;
     color: white;
+    text-decoration: none;
+}
+
+.header__contacts-item:hover {
+    text-decoration: underline;
 }
 
 .header__contacts-item:first-child {
@@ -757,6 +829,11 @@
 .footer__contacts-item {
     font: 500 18px/28px "Gilroy", sans-serif;
     color: white;
+    text-decoration: none;
+}
+
+.footer__contacts-item:hover {
+    text-decoration: underline;
 }
 
 .footer__contacts-item:first-child {
@@ -774,6 +851,11 @@
     font: 500 18px/28px "Gilroy", sans-serif;
     color: white;
     margin-bottom: 30px;
+    text-decoration: none;
+}
+
+.footer__social-email:hover {
+    text-decoration: underline;
 }
 
 .footer__social-items {

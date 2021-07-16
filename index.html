@@ -9,14 +9,28 @@
   <title>Kitchen</title>
 </head>
 <body class="body">
+<div class="burger-contacts-block">
+  <div class="burger-contacts-block__header">
+    <div class="burger-contacts-block__header-close">
+      <img src="icons/Close.svg" alt="logo"/>
+    </div>
+  </div>
+  <div class="burger-contacts-block__content">
+    <a class="burger-contacts-block__site" href="mailto: email@email.email">email@email.email</a>
+    <div class="burger-contacts-block__contacts">
+      <a class="burger-contacts-block__contacts-item" href="tel:+77777777777">+7 777 777 7777</a>
+      <a class="burger-contacts-block__contacts-item" href="tel:+77777777777">+7 777 777 7777</a>
+    </div>
+  </div>
+</div>
 <header class="header">
   <div class="header__logo">
     <img src="icons/Logo.svg" alt="logo"/>
   </div>
-  <div class="header__site">email@email.email</div>
+  <a class="header__site" href="mailto: email@email.email">email@email.email</a>
   <div class="header__contacts">
-    <div class="header__contacts-item">+7 777 777 7777</div>
-    <div class="header__contacts-item">+7 777 777 7777</div>
+    <a class="header__contacts-item" href="tel:+77777777777">+7 777 777 7777</a>
+    <a class="header__contacts-item" href="tel:+77777777777">+7 777 777 7777</a>
   </div>
   <div class="header__burger">
     <img src="icons/Burger.svg" alt="logo"/>
@@ -26,18 +40,18 @@
   <section class="carousel">
     <div class="carousel__description">
       <div class="carousel__description-social">
-        <div class="carousel__description-social-item">
+        <a class="carousel__description-social-item" href="https://web.telegram.org/">
           <img src="icons/telegram.svg" alt="logo"/>
-        </div>
-        <div class="carousel__description-social-item">
+        </a>
+        <a class="carousel__description-social-item" href="https://www.viber.com/ru/">
           <img src="icons/viber.svg" alt="logo"/>
-        </div>
-        <div class="carousel__description-social-item">
+        </a>
+        <a class="carousel__description-social-item" href="https://www.whatsapp.com/?lang=ru">
           <img src="icons/whatsapp.svg" alt="logo"/>
-        </div>
-        <div class="carousel__description-social-item">
+        </a>
+        <a class="carousel__description-social-item" href="https://www.instagram.com/?hl=ru">
           <img src="icons/instagram.svg" alt="logo"/>
-        </div>
+        </a>
       </div>
       <div class="carousel__description-block">
         <div class="carousel__description-block-title">Авторские кухни</div>
@@ -46,7 +60,7 @@
           <p class="carousel__description-block-text-little">since 0000</p>
         </div>
         <div class="carousel__description-block-consultation">
-          <button type="button" class="button">Получить консультацию</button>
+          <a href="#form" class="button">Получить консультацию</a>
         </div>
       </div>
     </div>
@@ -173,7 +187,7 @@
       </div>
     </div>
     <div class="work__event">
-      <button type="button" class="button">Получить предложение</button>
+      <a href="#form" class="button">Получить предложение</a>
     </div>
   </section>
   <section class="portfolio">
@@ -216,7 +230,7 @@
       <img src="images/videoImage.png" alt="item"/>
     </div>
   </section>
-  <section class="form">
+  <section id="form" class="form">
     <div class="form__title">
       Заполните заявку и получите <br/>
       максильмальную скидку от SMIRNOV Kitchen
@@ -233,27 +247,28 @@
   </div>
   <div class="footer__right-block">
     <div class="footer__contacts">
-      <div class="footer__contacts-item">+7 777 777 7777</div>
-      <div class="footer__contacts-item">+7 777 777 7777</div>
+      <a class="footer__contacts-item" href="tel:+77777777777">+7 777 777 7777</a>
+      <a class="footer__contacts-item" href="tel:+77777777777">+7 777 777 7777</a>
     </div>
     <div class="footer__social">
-      <div class="footer__social-email">email@email.email</div>
+      <a class="footer__social-email" href="mailto: email@email.email">email@email.email</a>
       <div class="footer__social-items">
-        <div class="footer__social-items-elem">
+        <a class="footer__social-items-elem" href="https://web.telegram.org/">
           <img src="icons/telegram.svg" alt="logo"/>
-        </div>
-        <div class="footer__social-items-elem">
+        </a>
+        <a class="footer__social-items-elem" href="https://www.viber.com/ru/">
           <img src="icons/viber.svg" alt="logo"/>
-        </div>
-        <div class="footer__social-items-elem">
+        </a>
+        <a class="footer__social-items-elem" href="https://www.whatsapp.com/?lang=ru">
           <img src="icons/whatsapp.svg" alt="logo"/>
-        </div>
-        <div class="footer__social-items-elem">
+        </a>
+        <a class="footer__social-items-elem" href="https://www.instagram.com/?hl=ru">
           <img src="icons/instagram.svg" alt="logo"/>
-        </div>
+        </a>
       </div>
     </div>
   </div>
 </footer>
+<script src="index.js"></script>
 </body>
 </html>
