@@ -254,7 +254,10 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("./images/Bgrng.png");
+    background-image: url("./images/intro/intro_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 1600px) {
@@ -376,6 +379,7 @@ html {
     font: 600 32px/50px "Gilroy", sans-serif;
     color: white;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .about__block {
@@ -418,13 +422,26 @@ html {
     color: white;
 }
 
+.about__block-image {
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    height: 100%;
+}
+
+.about__block-image img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:300px;
+    height:300px;
+    object-fit:cover;
+}
+
 @media (max-width: 1280px) {
     .about {
-        padding: 200px 0 0;
-    }
-
-    .about__title {
-
+        padding: 150px 0 0;
     }
 
     .about__block {
@@ -450,9 +467,29 @@ html {
     .about__block-group:nth-child(7) {
         flex-direction: row-reverse;
     }
+
+    .about__block-image {
+        position: relative;
+        overflow: hidden;
+        width: 50%;
+        height: 100%;
+    }
+
+    .about__block-image img {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        width:100%;
+        height:300px;
+        object-fit:cover;
+    }
 }
 
 @media (max-width: 600px) {
+    .about {
+        padding: 100px 0 0;
+    }
     .about__block-group {
         position: relative;
     }
@@ -464,10 +501,22 @@ html {
         width: 100%;
         height: 100%;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        z-index: 2;
     }
 
     .about__block-image {
         width: 100%;
+        height: 300px;
+    }
+
+    .about__block-image img {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        width:100%;
+        height:300px;
+        object-fit:cover;
     }
 }
 
@@ -552,6 +601,10 @@ html {
 }
 
 @media (max-width: 768px) {
+    .work {
+        padding: 100px 0;
+    }
+
     .work__steps {
         padding: 0;
         margin-bottom: 50px;
@@ -581,53 +634,31 @@ html {
     width: 100%;
     display: flex;
     height: 735px;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    position: relative;
+
 }
 
 .portfolio__carousel-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     display: flex;
+    height: 100%;
     overflow-x: scroll;
-    counter-reset: item;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    animation: carousel 10s linear infinite;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
 }
 
-.portfolio__carousel-container:hover{
-    animation-play-state: paused;
-}
-
-.portfolio__carousel-item {
-    position: relative;
-    flex: 0 0 auto;
-    width: 1080px;
+.portfolio__carousel-container-item {
     margin-right: 20px;
-    counter-increment: item;
 }
 
 .portfolio__carousel-item img {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:auto;
     height:100%;
-    object-fit:cover;
-}
-
-@keyframes carousel {
-    50% { left: -100%; }
-    100% { left: 0; }
 }
 
 @media (max-width: 1280px) {
+    .portfolio {
+        padding-top: 150px;
+    }
+
     .portfolio__carousel {
         height: 720px;
     }
@@ -638,6 +669,9 @@ html {
 }
 
 @media (max-width: 600px) {
+    .portfolio {
+        padding-top: 100px;
+    }
     .portfolio__carousel {
         height: 500px;
     }
@@ -679,6 +713,10 @@ html {
 }
 
 @media (max-width: 768px) {
+    .comparison {
+        padding-top: 100px;
+    }
+
     .comparison__title {
         font: 600 22px/34px "Gilroy", sans-serif;
     }
@@ -742,6 +780,10 @@ html {
 }
 
 @media (max-width: 768px) {
+    .video {
+        padding-top: 100px;
+    }
+
     .video__title {
         font: 600 22px/34px "Gilroy", sans-serif;
     }
@@ -772,12 +814,91 @@ html {
 .form__component {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 705px;
     height: 603px;
+    padding: 0 60px;
     color: white;
+}
+
+.form__component-item-title {
+    margin-bottom: 10px;
+    font: 400 16px/25px "Gilroy", sans-serif;
+}
+
+.form__component-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.form__component-item-horizontal {
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.form__component-form, .form__component-item-label, .form__component-item-input {
+    width: 100%;
+}
+
+.form__component-item-label {
+    font: 400 16px/24px "Gilroy", sans-serif;
+    margin-bottom: 5px;
+}
+
+.form__component-item-input {
+    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 0 20px;
+    transition: 0.3s;
+}
+
+.form__component-item-input:focus {
+    border-radius: 0;
     border: 1px solid white;
+    outline: none;
+}
+
+.submit-button {
+    margin-top: 50px;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid white;
+    box-shadow: none;
+    padding: 9px;
+    border-radius: 0;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkbox:active, .checkbox:checked:active {
+    box-shadow: none;
+}
+
+.checkbox:checked {
+    background-color: white;
+    border: 1px solid white;
+    box-shadow: none;
+    color: #232323;
+}
+
+.checkbox:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 3px;
+    color: #232323;
 }
 
 @media (max-width: 1280px) {
