@@ -254,7 +254,10 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("./images/Bgrng.png");
+    background-image: url("./images/intro/intro_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @media (max-width: 1600px) {
@@ -631,50 +634,24 @@ html {
     width: 100%;
     display: flex;
     height: 735px;
-    flex-wrap: nowrap;
-    overflow: hidden;
-    position: relative;
+
 }
 
 .portfolio__carousel-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     display: flex;
+    height: 100%;
     overflow-x: scroll;
-    counter-reset: item;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    animation: carousel 10s linear infinite;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
 }
 
-.portfolio__carousel-container:hover{
-    animation-play-state: paused;
-}
-
-.portfolio__carousel-item {
-    position: relative;
-    flex: 0 0 auto;
-    width: 1080px;
+.portfolio__carousel-container-item {
     margin-right: 20px;
-    counter-increment: item;
 }
 
 .portfolio__carousel-item img {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:auto;
     height:100%;
-    object-fit:cover;
-}
-
-@keyframes carousel {
-    50% { left: -100%; }
-    100% { left: 0; }
 }
 
 @media (max-width: 1280px) {
