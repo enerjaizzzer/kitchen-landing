@@ -238,7 +238,38 @@
     <div class="form__description">
       Загрузите готовый проект или предложение других производителей
     </div>
-    <div class="form__component">form</div>
+    <div class="form__component">
+      <form class="form__component-form" action="/action_page.php">
+        <div class="form__component-item">
+          <label class="form__component-item-label" for="email">
+            Укажите почту, куда мы отправим предложение
+          </label>
+          <input class="form__component-item-input" type="text" id="email"
+                 name="lname" value="" placeholder="Ваш email">
+        </div>
+        <div class="form__component-item">
+          <label class="form__component-item-label" for="name">Как вас зовут?</label>
+          <input class="form__component-item-input" type="text" id="name"
+                 name="lname" value="" placeholder="Введите ваше имя полностью">
+        </div>
+        <div class="form__component-item">
+          <label class="form__component-item-label" for="number">Контактный телефон, если у вас возникнут
+            вопросы</label>
+          <input class="form__component-item-input" type="text" id="number"
+                 name="lname" value="" placeholder="(33) 659-51-56">
+        </div>
+        <div class="form__component-item-title">Подтвердите соотвествующие требования программы</div>
+        <div class="form__component-item form__component-item-horizontal">
+          <input class="checkbox" type="checkbox" id="project" name="project" value="">
+          <label for="project"> У меня уже есть проект кухни</label>
+        </div>
+        <div class="form__component-item-horizontal form__component-item">
+          <input class="checkbox" type="checkbox" id="concurrency" name="concurrency" value="">
+          <label for="concurrency"> У меня есть предложение от других производителей</label><br>
+        </div>
+        <input class="button submit-button" type="submit" value="Отправить заявку">
+      </form>
+    </div>
   </section>
 </main>
 <footer class="footer">
