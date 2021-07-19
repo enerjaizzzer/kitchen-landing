@@ -32,6 +32,7 @@ html {
     right: 0;
     padding: 0 20px;
     transition: 0.3s;
+    z-index: 3;
 }
 
 .burger-contacts-block__header {
@@ -693,11 +694,56 @@ html {
 }
 
 .comparison__component {
+    position: relative;
     display: flex;
     width: 1200px;
     height: 680px;
     justify-content: center;
     align-items: center;
+}
+
+.comparison__component-first-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-size: auto 100%;
+    background-image: url("./images/render/r1.png");
+}
+
+.comparison__component-second-frame {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-size: auto 100%;
+    background-position: right;
+    background-image: url("./images/render/r2.png");
+}
+
+.comparison__component-line {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 100%;
+    background: white;
+    z-index: 1;
+}
+
+.comparison__component-line:after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 38px);
+    left: calc(50% - 6px);
+    width: 12px;
+    height: 76px;
+    background: white;
+    z-index: 2;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 @media (max-width: 1280px) {
