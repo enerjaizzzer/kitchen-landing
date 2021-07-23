@@ -255,7 +255,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("./images/intro/intro_bg.jpg");
+    background-image: url("./images/intro/intro_bg-min.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -649,10 +649,8 @@ html {
 
 .portfolio__carousel-container-item {
     margin-right: 20px;
-}
-
-.portfolio__carousel-item img {
     height:100%;
+    max-width: none;
 }
 
 @media (max-width: 1280px) {
@@ -709,7 +707,7 @@ html {
     width: 50%;
     height: 100%;
     background-size: auto 100%;
-    background-image: url("./images/render/r1.png");
+    background-image: url("./images/render/r1-min.png");
 }
 
 .comparison__component-second-frame {
@@ -720,7 +718,7 @@ html {
     height: 100%;
     background-size: auto 100%;
     background-position: right;
-    background-image: url("./images/render/r2.png");
+    background-image: url("./images/render/r2-min.png");
 }
 
 .comparison__component-line {
@@ -752,8 +750,8 @@ html {
     }
 
     .comparison__component {
-        width: 100%;
-        height: auto;
+        width: 730px;
+        height: 430px;
         align-items: flex-start;
     }
 }
@@ -761,6 +759,12 @@ html {
 @media (max-width: 768px) {
     .comparison {
         padding-top: 100px;
+    }
+
+    .comparison__component {
+        width: 360px;
+        height: 220px;
+        align-items: flex-start;
     }
 
     .comparison__title {
